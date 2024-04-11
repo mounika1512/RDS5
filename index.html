@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reports Distribution System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,10 +57,34 @@
         .statusFail {
             color: black;
         }
+        /* Custom Datepicker Styling */
         .ui-datepicker {
-    z-index: 9999; /* Set a high z-index value to ensure it appears above other elements */
-}
-
+            font-size: 12px;
+        }
+        .ui-datepicker-header {
+            background: #2C3E50;
+            color: white;
+            border: none;
+        }
+        .ui-datepicker-calendar {
+            border: none;
+        }
+        .ui-datepicker-calendar a {
+            color: #333;
+        }
+        .ui-datepicker-current-day a {
+            background: #3498db !important;
+            color: white !important;
+        }
+        .ui-datepicker-week-end a {
+            color: #c0392b !important;
+        }
+        .ui-datepicker-unselectable a {
+            color: #bdc3c7 !important;
+        }
+        .ui-datepicker-next, .ui-datepicker-prev {
+            color: white !important;
+        }
     </style>
 </head>
 <body>
