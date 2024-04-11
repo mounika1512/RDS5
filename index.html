@@ -97,12 +97,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
         $(function() {
-            $("#datepicker").datepicker({
-                dateFormat: 'm/d/yy',
-                onSelect: function(dateText, inst) {
-                    $(this).datepicker('hide'); // Hide the datepicker after selecting a date
-                    filterTable(dateText);
-                }
+            function initializeDatepicker() {
+                $("#datepicker").datepicker({
+                    dateFormat: 'm/d/yy',
+                    onSelect: function(dateText, inst) {
+                        $(this).datepicker('hide'); // Hide the datepicker after selecting a date
+                        filterTable(dateText);
+                    }
+                });
+            }
+
+            initializeDatepicker();
+
+            $('#datepicker').on('click', function() {
+                initializeDatepicker();
+                $('#datepicker').datepicker('show');
             });
 
             let currentBatch = 1;
