@@ -92,9 +92,9 @@
     <script>
         $(function() {
             $("#datepicker").datepicker({
-                dateFormat: 'm/d/yy', // Corrected date format here
-                onSelect: function(date) {
-                    filterTable(date);
+                dateFormat: 'm/d/yy',
+                onClose: function(dateText, inst) {
+                    filterTable(dateText);
                 }
             });
 
